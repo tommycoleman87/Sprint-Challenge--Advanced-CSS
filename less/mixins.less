@@ -14,3 +14,22 @@
     height: @height;
     border-radius: @border-radius;
 }
+
+.animate(@name, @duration, @delay) {
+    @keyframes bounceIn {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+     animation: @name @duration;
+     animation-delay: @delay;
+}
