@@ -1,1 +1,35 @@
 // Mixins Here
+
+.flex(@direction, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+
+}
+
+.button(@color, @width, @height, @border-radius){
+    color: @color;
+    width: @width;
+    height: @height;
+    border-radius: @border-radius;
+}
+
+.animate(@name, @duration, @delay) {
+    @keyframes bounceIn {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+     animation: @name @duration;
+     animation-delay: @delay;
+}

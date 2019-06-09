@@ -1,17 +1,29 @@
 // Home Content
 
 .home {
+  font-weight: bold;
+  @media @phone {
+    .flex(column, center, center);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   .intro {
+    @media @phone {
+      width: 100%;
+    }
+    img {
+      border-radius: 5px;
+      width: 100%;
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
@@ -24,12 +36,38 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+    }
+
+    .blast {
+      .animate(bounceIn, 2s, 0);
+    }
+
+    .sky {
+      .animate(bounceIn, 2s, 2s);
+      @media @phone {
+        display: none;
+      }
+    }
+
+    .launch {
+      .animate(bounceIn, 2s, 4s);
+      @media @phone {
+        display: none;
+      }
     }
   }
 
   .visit-planets {
     padding: 15px;
 
+    @media @phone {
+      width: 100%;
+    }
     h3 {
       margin-top: 11px;
     }
@@ -45,9 +83,21 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    
+    @media @phone {
+      width: 100%;
+      .flex(column, center, center);
+      margin-top: 20px;
+      padding: 0;
+    }
 
     .walk-text {
       width: 50%;
+      
+      @media @phone {
+        width: 100%;
+        order: 2;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,13 +108,33 @@
       }
 
       .btn {
+        button {
+          @media @phone {
+            width: 100%;
+            height: 80px;
+          }
+          .button(white, 100px, 40px, 8px);
+          background: @ebony-clay;
+          font-size: 1.8rem;
+          font-weight: bold;
+
+          &:hover {
+            color: @ebony-clay;
+            background: white;
+          }
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+      @media @phone {
+        width: 100%;
+        margin: 15px 0 15px 0;
+        order: 1;
+      }
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +142,4 @@
       }
     }
   }
-}// home
+} // home

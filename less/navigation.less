@@ -1,1 +1,24 @@
 // Navigation code here
+.nav-bar {
+    .flex(column, center, center);
+    margin: auto;
+    background: @nav-bg;
+    height: 100px;
+    width: 100%;
+    max-width: 800px;
+    h1 {
+        color: @header-font-color;
+    }
+
+    nav {
+        position: sticky;
+        top: 10px;
+        margin-top: 20px;
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        font-size: 1.5rem;
+        color: @nav-font;
+        font-weight: bold;
+    }
+}
